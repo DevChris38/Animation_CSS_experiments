@@ -1,0 +1,46 @@
+svg:hover ~ .one {
+    animation: vibration_1 10ms ease alternate infinite;
+}
+
+
+.two {
+    animation: vibration_2 10ms ease alternate infinite;
+}
+
+.three {
+    animation: vibration_3 10ms ease alternate infinite;
+}
+
+.electron {
+    animation: vibration_electron 10ms ease alternate infinite;
+}
+
+
+
+@keyframes vibration_1 {
+    100% {
+        transform: translateX(5px);
+    }
+}
+
+@keyframes vibration_2 {
+    100% {
+        transform: translate(3px, 3px);
+    }
+}
+
+@keyframes vibration_3 {
+    100% {
+        transform: translate(3px, -3px);
+    }
+}
+
+@keyframes vibration_electron {
+    0% { transform: skewY(-1deg); }
+    5% { transform: skewY(1deg); }
+    10% { transform: skewY(-1deg); }
+    15% { transform: skewY(1deg); }
+    20% { transform: skewY(0deg); }
+    100% { transform: skewY(0deg); }
+}
+

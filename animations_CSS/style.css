@@ -1,0 +1,165 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    width: 100vw;
+    height: 100vh;
+}
+
+header {
+    display: flex;
+    height: 15vh;
+    gap: 10vw;
+    background-color: hsl(271, 38%, 67%);
+
+}
+
+h1 {
+    margin: auto 0;
+    height: fit-content;
+    margin-left: 2vh;
+    color: hsl(271, 38%, 10%);
+}
+
+nav {
+    flex-grow: 2;
+}
+
+ul {
+    list-style-type: none;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+
+}
+
+a {
+    text-decoration: none;
+    color: hsl(271, 38%, 10%)
+}
+
+main {
+    border: 1px solid hsl(271, 38%, 95%);
+    height: 80vh;
+    background-color: hsl(271, 38%, 95%);
+}
+
+section {
+    margin: 5vh 15vw;
+    height: 70vh;
+    width: 70vw;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-content: space-around;
+}
+
+article {
+    height: 200px;
+    width: 200px;
+    background-color: hsl(271, 38%, 90%);
+    border: 2px solid hsl(271, 38%, 40%);
+    box-shadow: 10px 5px 5px hsl(271, 38%, 40%);
+    text-align: center;
+    font-size: 2rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: 0.5s;
+}
+
+footer {
+    height: 5vh;
+    background-color: hsl(271, 38%, 67%);
+    position: 0;
+}
+
+footer p {
+    line-height: 5vh;
+    margin-left: 5vw;
+}
+
+@keyframes articleFadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(15%);
+    }
+}
+
+@keyframes headerFadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-15%);
+    }
+}
+
+.article_1 {
+    animation: articleFadeIn 800ms ease-out backwards;
+    animation-delay: 1000ms;
+}
+.article_2 {
+    animation: headerFadeIn 800ms ease-out backwards;
+    animation-delay: 1200ms;
+}
+.article_3:not(:hover) {
+    animation: articleFadeIn 800ms ease-out backwards;
+    animation-delay: 1200ms;
+}
+.article_4 {
+    animation: headerFadeIn 800ms ease-out backwards;
+    animation-delay: 1000ms;
+}
+
+header>* {
+    animation: headerFadeIn 800ms ease-out backwards;
+    animation-delay: 500ms;
+}
+
+@keyframes backgroundFadeIn {
+    from {
+        opacity: 0;
+    }
+}
+
+
+* {
+    animation: backgroundFadeIn 800ms ease-out backwards;
+}
+
+@keyframes scale {
+    0%{
+        transform: scale(1);
+        border-radius: 0%;
+    }
+    50%{
+        transform: scale(1.2);
+        border-radius: 10%;
+    }
+    100%{
+        transform: scale(1);
+        border-radius: 0%;
+    }
+    }
+
+.article_1 {
+    animation: scale 1000ms cubic-bezier(0,1,1,0) infinite;
+    animation-delay: 2000ms;
+}
+.article_2:hover {
+    transform: scale(1.2);
+    border-radius: 10%;
+}
+
+@keyframes rotateArticle {
+    100% {
+        transformation: rotate (25%);
+    }
+}
+
+    .article_3:hover {
+        animation: rotateArticle 1000ms;
+}
